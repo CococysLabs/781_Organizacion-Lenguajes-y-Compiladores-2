@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question type="essay">
+        <name>
+            <text>Mod 20: For rango inclusivo</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p><strong>Mod 20:</strong> Bucle for con rango inclusivo -> for (i in x..y).</p>
+    <p><strong>Entrada:</strong></p>
+    <pre><code>for i in 1..4 {
+    fmt.Println(i)
+}</code></pre>
+    <p><strong>Salida:</strong></p>
+    <pre><code>1
+2
+3
+4</code></pre>
+    <p><i>Sube el link del commit y el PDF con la captura de pantalla correspondiente.</i></p>]]></text>
+        </questiontext>
+        <responseformat>editorfilepicker</responseformat>
+        <attachments>1</attachments>
+        <attachmentsrequired>1</attachmentsrequired>
+    </question>
+
+    <question type="essay">
+        <name>
+            <text>Mod 21: Case con rango</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p><strong>Mod 21:</strong> Un case puede listar varias constantes por medio de rango E1..E2. Coincide si la variable está dentro de algún rango.</p>
+    <p><strong>Entrada:</strong></p>
+    <pre><code>var score int32 = 85
+switch score {
+case 90..100:
+    fmt.Println("A")
+    break
+case 80..89:
+    fmt.Println("B")
+    break
+case 70..79:
+    fmt.Println("C")
+    break
+default:
+    fmt.Println("F")
+}</code></pre>
+    <p><strong>Salida:</strong></p>
+    <pre><code>B</code></pre>
+    <p><i>Sube el link del commit y el PDF con la captura de pantalla correspondiente.</i></p>]]></text>
+        </questiontext>
+        <responseformat>editorfilepicker</responseformat>
+        <attachments>1</attachments>
+        <attachmentsrequired>1</attachmentsrequired>
+    </question>
+
+    <question type="essay">
+        <name>
+            <text>Mod 22: Comparación por rango</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p><strong>Mod 22:</strong> Operador de comparación por rango: in [E1..E2] y not in [E1..E2].</p>
+    <p><strong>Entrada:</strong></p>
+    <pre><code>var x int32 = 10
+fmt.Println( x in [5..10] )
+fmt.Println( x not in [11..20] )</code></pre>
+    <p><strong>Salida:</strong></p>
+    <pre><code>true
+true</code></pre>
+    <p><i>Sube el link del commit y el PDF con la captura de pantalla correspondiente.</i></p>]]></text>
+        </questiontext>
+        <responseformat>editorfilepicker</responseformat>
+        <attachments>1</attachments>
+        <attachmentsrequired>1</attachmentsrequired>
+    </question>
+
+    <question type="essay">
+        <name>
+            <text>Mod 23: Composición de funciones</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p><strong>Mod 23:</strong> Operador de composición de funciones. Permite escribir f ∘ g (x) como f(g(x)). Utilizando el operador |></p>
+    <p><strong>Entrada:</strong></p>
+    <pre><code>func doble(x int) int {
+    return x * 2
+}
+
+func suma1(x int) int {
+    return x + 1
+}
+
+func main() {
+    r := doble |> suma1 (3)
+    fmt.Println(r)
+}</code></pre>
+    <p><strong>Salida:</strong></p>
+    <pre><code>8</code></pre>
+    <p><i>Sube el link del commit y el PDF con la captura de pantalla correspondiente.</i></p>]]></text>
+        </questiontext>
+        <responseformat>editorfilepicker</responseformat>
+        <attachments>1</attachments>
+        <attachmentsrequired>1</attachmentsrequired>
+    </question>
+
+    <question type="essay">
+        <name>
+            <text>Mod 24: Orden de evaluación</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p><strong>Mod 24:</strong> Orden de evaluación definido (derecha a izquierda). Define que los argumentos de función se evalúan de derecha a izquierda.</p>
+    <p><strong>Entrada:</strong></p>
+    <pre><code>func f(x int) int {
+    fmt.Println(x)
+    return x
+}
+
+func g(a int, b int) int {
+    return a + b
+}
+
+func main() {
+    r := g(f(1), f(2))
+    fmt.Println(r)
+}</code></pre>
+    <p><strong>Salida:</strong></p>
+    <pre><code>2
+1
+3</code></pre>
+    <p><i>Sube el link del commit y el PDF con la captura de pantalla correspondiente.</i></p>]]></text>
+        </questiontext>
+        <responseformat>editorfilepicker</responseformat>
+        <attachments>1</attachments>
+        <attachmentsrequired>1</attachmentsrequired>
+    </question>
+
+    <question type="essay">
+        <name>
+            <text>Mod 25: Operador ternario</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p><strong>Mod 25:</strong> Operador ternario (cond ? E1 : E2). Introduce evaluación condicional dentro de expresiones.</p>
+    <p><strong>Entrada:</strong></p>
+    <pre><code>func f() int {
+    fmt.Println(1)
+    return 1
+}
+
+func g() int {
+    fmt.Println(2)
+    return 2
+}
+
+func main() {
+    r := true ? f() : g()
+    fmt.Println(r)
+}</code></pre>
+    <p><strong>Salida:</strong></p>
+    <pre><code>1
+1</code></pre>
+    <p><i>Sube el link del commit y el PDF con la captura de pantalla correspondiente.</i></p>]]></text>
+        </questiontext>
+        <responseformat>editorfilepicker</responseformat>
+        <attachments>1</attachments>
+        <attachmentsrequired>1</attachmentsrequired>
+    </question>
+
+    <question type="essay">
+        <name>
+            <text>Mod 26: Operador Pipe</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p><strong>Mod 26:</strong> Operador de “pipe” (|>). El valor de la izquierda se convierte en el primer argumento de la función de la derecha.</p>
+    <p><strong>Entrada:</strong></p>
+    <pre><code>func f(x int) int {
+    return x + 2
+}
+
+func g(x int) int {
+    return x * 3
+}
+
+func h(x int) int {
+    return x - 1
+}
+
+func main() {
+    r := 2 |> f() |> g() |> h()
+    fmt.Println(r)
+}</code></pre>
+    <p><strong>Salida:</strong></p>
+    <pre><code>11</code></pre>
+    <p><i>Sube el link del commit y el PDF con la captura de pantalla correspondiente.</i></p>]]></text>
+        </questiontext>
+        <responseformat>editorfilepicker</responseformat>
+        <attachments>1</attachments>
+        <attachmentsrequired>1</attachmentsrequired>
+    </question>
+
+</quiz>

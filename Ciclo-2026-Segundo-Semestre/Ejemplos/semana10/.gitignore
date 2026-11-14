@@ -1,0 +1,13 @@
+# .NET
+bin/
+obj/
+.vs/
+
+# Código generado por ANTLR (se genera al compilar)
+.antlr/
+*.interp
+*.tokens
+
+# Salida de la demo (C generado y ejecutable de gcc)
+salida
+salida.c

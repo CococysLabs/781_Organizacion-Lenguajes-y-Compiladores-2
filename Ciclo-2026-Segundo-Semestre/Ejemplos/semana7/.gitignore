@@ -1,0 +1,9 @@
+# .NET
+bin/
+obj/
+.vs/
+
+# Código generado por ANTLR (se genera al compilar)
+.antlr/
+*.interp
+*.tokens
